@@ -83,8 +83,8 @@ a:focus-visible {
 .header-container {
     max-width: 1350px;
     margin: 0 auto;
-    padding: 0 20px;
-    height: 52px;
+    padding: 10px 20px;
+    /*height: 52px;*/
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -105,9 +105,10 @@ a:focus-visible {
     display: flex;
     align-items: center;
     gap: 18px;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    /*overflow-x: auto;
     scrollbar-width: thin;
-    white-space: nowrap;
+    white-space: nowrap;*/
 }
 
 .main-nav a {
