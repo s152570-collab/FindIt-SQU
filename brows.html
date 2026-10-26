@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>FindIt@SQU</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Internal CSS for the home page -->
+    <style>
+        #welcome {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+                url("Images/welcome.png") center/cover no-repeat;
+            background-size: cover;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--Header -> Logo and Navigation-->
+    <header id="main-header">
+        <div class="header-container">
+            <a class="logo" href="index.html">
+                <img src="Images/logo.png" alt="FindIT@SQU Logo" width="50" height="50">
+            </a>
+            <a href="index.html" class="logo-text">FindIT@SQU</a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="browse.html" class="active">Browse and Search Items</a>
+                <a href="report-lost.html">Lost Items</a>
+                <a href="report-found.html">Found Items</a>
+                <a href="report-lost.html">Report Lost Items</a>
+                <a href="report-found.html">Report Found Items</a>
+                <!-- More -->
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <section id="welcome">
+        <h1>Browse and Search Items</h1>
+    </section>
+    <main class="main-container">
+        <h2 class="content-heading">Browse and Search Items</h2>
+        <p class="content-text">Looking for somthing you lost?</p>
+        <p class="content-text">Here you can brows items that have been reported lost of found around SQU.</p>
+        <p class="content-text">You can check the item's description, location, and date to see it is matches ehat you'r looking for.</p>
+
+        <div class="browse-container">
+            <article class="item-card">
+                <div class="item-image">
+                    <img src="Images/redHandBag.png" alt="Red Handbag">
+                </div>
+                <div class="item-details">
+                    <hr >
+                    <h2 class="item-title">Red Handbag</h2>
+                    <hr>
+                    <p><strong>Category: </strong> Personal belongings</p>
+                    <p><strong>Location: </strong> College of Science, SQU</p>
+                    <p><strong>Date lost: </strong> 5 October 2026</p>
+                    <p><strong>Description: </strong> A red handbag was lost near the F classrooms</p>
+                    <p><strong>Status: </strong> Still missing</p>
+                </div>
+            </article>
+            <article class="item-card">
+                <div class="item-image">
+                    <img src="Images/Golden watch.jpg" alt="Gold watch">
+                </div>
+                <div class="item-details">
+                    <hr >
+                    <h2 class="item-title">Gold watch</h2>
+                    <hr >
+                    <p><strong>Category: </strong> Accessories</p>
+                    <p><strong>Location: </strong> Main Library, SQU</p>
+                    <p><strong>Date lost: </strong> 7 October 2026</p>
+                    <p><strong>Description: </strong> A golden watch was found on a study table in the main library</p>
+                    <p><strong>Status: </strong> Found</p>
+                </div>
+            </article>
+            
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 FindIT@SQU. All rights reserved.</p>
+            <p><a href="about.html" class="footer-link">About Us</a> | <a href="contact.html" class="footer-link">Contact Us</a> | <a
+                    href="mailto:infofindit@squ.edu" class="footer-link">findit@squ.edu.om</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
