@@ -392,4 +392,112 @@ ul.plain{
 li{
     margin-bottom: 10px;
 }
+/* ------------ Forms ---------------- */
 
+.form-actions{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+form.form-card{
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border: 1px solid #DDE3EA;
+    border-radius: 12px;
+    padding: 26px;
+
+}
+fieldset{
+    border: 1px solid #C4CFDB;
+    border-radius: 8px;
+    margin: 0 0 20px;
+    padding: 14px 18px;
+}
+legend{
+    font-weight: 700;
+    color: #1F4E79;
+    padding: 0 8px;
+}
+label{
+    display: block;
+    font-weight: 500;
+    margin: 12px 0 4px;
+}
+label.inline{
+    display: inline;
+    margin-right: 14px;
+    font-weight: 400;
+}
+input[type="submit"], input[type="reset"]{
+    width: auto;
+}
+input[type="reset"]{
+    background-color: transparent;
+    border: 1px solid var(--bg-button) ;
+    color: var(--bg-button);
+
+}
+input[type="reset"]:hover{
+    background-color: var(--bg-button);
+    border-color: var(--bg-button);
+    color: #FFFFFF;
+}
+input[type="text"],input[type="email"],input[type="tel"],input[type="password"],input[type="date"],
+input[type="file"],select,textarea{
+    width: 100%;
+    padding: 10px;
+    font-family:inherit;
+    font-size: 1rem;
+    border: 1px solid #8CA0B5;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+}
+.table-wrap{
+    overflow-x: auto;
+
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #FFFFFF;
+
+}
+caption{
+    caption-side: top;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding :8px;
+    text-align: left;
+    color: var(--bg-header);
+}
+th,td{
+    border: 1px solid #C4CFDB;
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+th{
+    background-color: var(--bg-header);
+    color: #FFFFFF;
+    text-align: center;
+}
+tr:nth-child(even) td {
+    background-color: #F0F4F8;
+}
+td.group{
+    background-color: var(--link-active-bg);
+    font-weight: 700;
+    text-align: center;
+}
+tfoot td{
+    background-color: #d2e4ea;
+    font-weight: 700;
+}
+td img{
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
