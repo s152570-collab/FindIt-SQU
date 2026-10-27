@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title>FindIt@SQU</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Internal CSS for the home page -->
+    <style>
+        #welcome {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+                url("Images/welcome.png") center/cover no-repeat;
+            background-size: cover;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--Header -> Logo and Navigation-->
+    <header id="main-header">
+        <div class="header-container">
+            <a class="logo" href="index.html">
+                <img src="Images/logo.png" alt="FindIT@SQU Logo" width="50" height="50">
+            </a>
+            <a href="index.html" class="logo-text">FindIT@SQU</a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="brows.html">Browse and Search Items</a>
+                <a href="lost.html">Lost Items</a>
+                <a href="found.html" class="active">Found Items</a>
+                <a href="report-lost.html">Report Lost Items</a>
+                <a href="report-found.html">Report Found Items</a>
+                <!-- More -->
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <section id="welcome">
+        <h1>Found Items</h1>
+    </section>
+    <main class="main-container">
+        <div class="content-container">
+            <h2 class="content-heading">
+                Found Items</h2>
+            <p class="content-text">Have you found something at SQU?</p>
+            <p class="content-text">This page shows items that have been found around SQU. Students and staff can check the listed items to see it something belongs to them.
+            </p>
+            <p class="content-text">Each report includes the items's description, where it was found, and where it is currently being kept.
+            </p>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="images/phone.png" alt="red handbag">
+                    <div class="card-body"><span class="tag tag-found">Found</span>
+                        <h3>Black samrtphone</h3>
+                        <dl>
+                            <dt>Found at</dt>
+                            <dd>Block A</dd>
+                            <dt>Kept at</dt>
+                            <dd>finder</dd>
+                        </dl>
+                        <!--<a href="item-details.html">View details</a>-->
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="Images/Key.jpg" alt="Keys with a red keychain">
+                    <div class="card-body"><span class="tag tag-found">Found</span>
+                        <h3>Keys with red keychain</h3>
+                        <dl>
+                            <dt>Found at</dt>
+                            <dd>Library entrance</dd>
+                            <dt>Kept at</dt>
+                            <dd>Security office</dd>
+                        </dl>
+                        <!--<a href="item-details.html">View details</a>-->
+                    </div>
+                </article>
+            </div>
+            <h2 style="margin-top: 36px; margin-bottom: 16;">If you find somthing</h2>
+            <ol class="plain">
+                <li>Take a clear photo that does not show ID numbers.</li>
+                <li>Post the item and say where it is kept.</li>
+                <li>Reply to the owner and ask for a detail only the real owner would know.</li>
+            </ol>
+            <p><a class="btn btn-report-lost" href="report-found.html">Report a found item</a></p>
+
+
+        </div>
+
+
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 FindIT@SQU. All rights reserved.</p>
+            <p><a href="about.html" class="footer-link">About Us</a> | <a href="contact.html"
+                    class="footer-link">Contact Us</a> | <a href="mailto:infofindit@squ.edu"
+                    class="footer-link">findit@squ.edu.om</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
