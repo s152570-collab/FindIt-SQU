@@ -60,46 +60,148 @@
         <p class="content-text">Here you can brows items that have been reported lost of found around SQU.</p>
         <p class="content-text">You can check the item's description, location, and date to see it is matches ehat you'r looking for.</p>
 
-        <div class="browse-container">
-            <article class="item-card">
-                <div class="item-image">
-                    <img src="Images/redHandBag.png" alt="Red Handbag">
+       <!--
+            <div class="browse-container">
+                
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="Images/redHandBag.png" alt="Red Handbag">
+                    </div>
+                    <div class="item-details">
+                        <hr>
+                        <h2 class="item-title">Red Handbag</h2>
+                        <hr>
+                        <p><strong>Category: </strong> Personal belongings</p>
+                        <p><strong>Location: </strong> College of Science, SQU</p>
+                        <p><strong>Date lost: </strong> 5 October 2026</p>
+                        <p><strong>Description: </strong> A red handbag was lost near the F classrooms</p>
+                        <p><strong>Status: </strong> Still missing</p>
+                    </div>
+                </article>
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="Images/Golden watch.jpg" alt="Gold watch">
+                    </div>
+                    <div class="item-details">
+                        <hr>
+                        <h2 class="item-title">Gold watch</h2>
+                        <hr>
+                        <p><strong>Category: </strong> Accessories</p>
+                        <p><strong>Location: </strong> Main Library, SQU</p>
+                        <p><strong>Date lost: </strong> 7 October 2026</p>
+                        <p><strong>Description: </strong> A golden watch was found on a study table in the main library
+                        </p>
+                        <p><strong>Status: </strong> Found</p>
+                    </div>
+                </article>
+            </div>
+-->
+            <!--Add search-->
+            <form class="form-card" action="https://httpbin.org/get" method="get" style="margin-bottom: 32px;">
+                <fieldset>
+                    <legend>Search items</legend>
+                    <label for="q">Keyword</label>
+                    <input type="text" id="q" name="keyword" placeholder="e.g. phone, key, backpack">
+                    <label for="cat">Category</label>
+                    <select id="cat" name="category">
+                        <option value="">-- Choose --</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="Keys">Keys</option>
+                        <option value="bags">Bags</option>
+                        <option value="cards">Cards and IDs</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <p style="margin-top: 12px; margin-bottom: 0;">
+                        Type:
+                        <input type="radio" id="t-all" name="item_type" value="all" checked><label class="inline"
+                            for="t-all">All</label>
+                        <input type="radio" id="t-lost" name="item_type" value="lost" checked><label class="inline"
+                            for="t-lost">Lost</label>
+                        <input type="radio" id="t-found" name="item_type" value="found" checked><label class="inline"
+                            for="t-found">Found</label>
+                    </p>
+                    <label for="form">Posted since</label>
+                    <input type="date" id="form" name="date_from">
+                </fieldset>
+                <div class="form-actions"><input type="submit" value="Search"><input type="reset" value="Clear">
                 </div>
-                <div class="item-details">
-                    <hr >
-                    <h2 class="item-title">Red Handbag</h2>
-                    <hr>
-                    <p><strong>Category: </strong> Personal belongings</p>
-                    <p><strong>Location: </strong> College of Science, SQU</p>
-                    <p><strong>Date lost: </strong> 5 October 2026</p>
-                    <p><strong>Description: </strong> A red handbag was lost near the F classrooms</p>
-                    <p><strong>Status: </strong> Still missing</p>
-                </div>
-            </article>
-            <article class="item-card">
-                <div class="item-image">
-                    <img src="Images/Golden watch.jpg" alt="Gold watch">
-                </div>
-                <div class="item-details">
-                    <hr >
-                    <h2 class="item-title">Gold watch</h2>
-                    <hr >
-                    <p><strong>Category: </strong> Accessories</p>
-                    <p><strong>Location: </strong> Main Library, SQU</p>
-                    <p><strong>Date lost: </strong> 7 October 2026</p>
-                    <p><strong>Description: </strong> A golden watch was found on a study table in the main library</p>
-                    <p><strong>Status: </strong> Found</p>
-                </div>
-            </article>
-            
+            </form>
+            <div class="tabel-wrap">
+
+                <table border="1" cellspacing="0" cellpadding="8">
+                    <caption>Items reported this week</caption>
+                    <thead>
+                        <tr>
+                            <th colspan="7">Latest reports</th>
+                        </tr>
+                        <tr>
+                            <th>Category</th>
+                            <th>Photo</th>
+                            <th>Item</th>
+                            <th>Type</th>
+                            <th>Where</th>
+                            <th>Date</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="group" rowspan="2">Electronic</td>
+                            <td><img src="Images/phone.png" alt="smart phone"></td>
+                            <td>Black smartphone</td>
+                            <td>Found</td>
+                            <td>Block A</td>
+                            <td>06 Oct 2026</td>
+                            <td><a href="item-detail.html">View</a></td>
+                        </tr>
+                        <tr>
+
+                            <td><img src="Images/earbud.png" alt="Earbuds"></td>
+                            <td>White earbuds</td>
+                            <td>Lost</td>
+                            <td>collage of Engineering</td>
+                            <td>05 Oct 2026</td>
+                            <td><a href="lost.html">View</a></td>
+                        </tr>
+                        <tr>
+                            <td class="group">Keys</td>
+                            <td><img src="Images/Key.jpg" alt="Keys"></td>
+                            <td>Keys with red keychain</td>
+                            <td>Found</td>
+                            <td>Library entrance</td>
+                            <td>05 Oct 2026</td>
+                            <td><a href="found.html">View</a></td>
+
+                        </tr>
+                        <tr>
+                            <td class="group">Bag</td>
+                            <td><img src="Images/redHandBag.png" alt="Red handbag"></td>
+                            <td>Red Handbag</td>
+                            <td>lost</td>
+                            <td>E building</td>
+                            <td>06 Oct 2026</td>
+                            <td><a href="lost.html">View</a></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">Total items shown</td>
+                            <td colspan="2">4</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+
+            </div>
         </div>
-        </div>
+
     </main>
     <footer>
         <div class="footer-container">
             <p>&copy; 2026 FindIT@SQU. All rights reserved.</p>
-            <p><a href="about.html" class="footer-link">About Us</a> | <a href="contact.html" class="footer-link">Contact Us</a> | <a
-                    href="mailto:infofindit@squ.edu" class="footer-link">findit@squ.edu.om</a></p>
+            <p><a href="about.html" class="footer-link">About Us</a> | <a href="contact.html"
+                    class="footer-link">Contact Us</a> | <a href="mailto:infofindit@squ.edu"
+                    class="footer-link">findit@squ.edu.om</a></p>
         </div>
     </footer>
 </body>
