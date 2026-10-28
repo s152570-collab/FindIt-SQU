@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <title>FindIt@SQU</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Internal CSS for the home page -->
+    <style>
+        #welcome {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+                url("Images/welcome.png") center/cover no-repeat;
+            background-size: cover;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--Header -> Logo and Navigation-->
+    <header id="main-header">
+        <div class="header-container">
+            <a class="logo" href="index.html">
+                <img src="Images/logo.png" alt="FindIT@SQU Logo" width="50" height="50">
+            </a>
+            <a href="index.html" class="logo-text">FindIT@SQU</a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="brows.html">Browse and Search Items</a>
+                <a href="lost.html">Lost Items</a>
+                <a href="found.html">Found Items</a>
+                <a href="report-lost.html">Report Lost Items</a>
+                <a href="report-found.html">Report Found Items</a>
+                <a href="item-details.html" class="active">Item Details</a>
+                <!-- More -->
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <section id="welcome">
+        <h1>Items Details and contact Finder</h1>
+    </section>
+    <main class="main-container">
+        <div class="content-container">
+            <h2 class="content-heading">Items Details and Contact Finder</h2>
+            <p class="content-text">Think you found something that belongs to you?</p>
+            <p class="content-text">Here you can view the details of a found item and contact the person who found them.
+            </p>
+            <p class="content-text">To contact the finder, please fill out the form below and provide some information
+                to help us confirm that it belongs to you.</p>
+                <p><a href="brows.html">&larr; Back to results</a></p>
+        </div>
+        
+        <div class="two-col">
+            
+            <section>
+                <img class="item-photo" src="Images/phone.png" alt="Black smartphone">
+                <h2 style="margin-top: 18px;">Black smartphone <span class="tag tag-found">Found</span></h2>
+                <p>Found on a bench outside the lab. The screen is locked. One detail was left out on purpose so the
+                    real owner can describe it.</p>
+                <dl>
+                    <dt>Category</dt>
+                    <dd>Electronic</dd>
+                    <dt>Where it was found</dt>
+                    <dd>On lab 1031, collage of science</dd>
+                    <dt>Date found</dt>
+                    <dd>06 Oct 2026</dd>
+                    <dt>Where it is keprt</dt>
+                    <dd>Finder</dd>
+                    <dt>Poster by</dt>
+                    <dd>Miaad (email hiddin)</dd>
+                </dl>
+            </section>
+            <section>
+                <form class="form-card" action="https://httpbin.org/get" method="get">
+                    <h2>Contact the finder</h2>
+                    <input type="hidden" name="item-id" value="1001">
+                    <label for="oname">Your name</label>
+                    <input type="text" id="oname" name="owner-name" required>
+                    <label for="oemail">Your university email</label>
+                    <input type="email" id="oemail" name="owner-email" required>
+                    <label for="ophone">Phone (optional)</label>
+                    <input type="tel" id="ophone" name="owner-phone">
+                    <label for="msg">Details that prove it is yours</label>
+                    <textarea id="msg" name="message" required
+                        placeholder="Descibe something only the owner would know."></textarea>
+                    <p style="margin-top: 12px;"><input type="checkbox" is="meet" name="agree_public_meeting"
+                            value="yes" required>
+                        <label class="inline" for="meet">I will meet in a public place.</label>
+                    </p>
+                    <div class="form-action"><input type="submit" value="Send message to finder"></div>
+                </form>
+                <p class="note" style="margin-top: 16px;"><strong>Safety tip:</strong> meet at public place and only share details the real owner would know.</p>
+                <p><a href="contact.html">Report this post</a></p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 FindIT@SQU. All rights reserved.</p>
+            <p><a href="about.html" class="footer-link">About Us</a> | <a href="contact.html"
+                    class="footer-link">Contact Us</a> | <a href="mailto:infofindit@squ.edu"
+                    class="footer-link">findit@squ.edu.om</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
