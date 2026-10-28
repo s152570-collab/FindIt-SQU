@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Lost Item - FindIt@SQU</title>
+    <link rel="stylesheet" href="style.css">
+
+  
+    <style>
+        #welcome {
+            background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+                url("images/welcome.png") center/cover no-repeat;
+            height: 250px;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="header-container">
+            <a class="logo" href="index.html">
+                <img src="images/logo.png" alt="FindIT@SQU Logo" width="50" height="50">
+            </a>
+            <a href="index.html" class="logo-text">FindIT@SQU</a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="browse.html">Browse and Search Items</a>
+                <a href="lost.html">Lost Items</a>
+                <a href="found.html">Found Items</a>
+                <a href="report-lost.html" class="active">Report Lost Items</a>
+                <a href="report-found.html">Report Found Items</a>
+                <a href="item-details.html">Item Details</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="login.html">Login</a>
+          </nav>
+         </div>
+    </header>
+
+    <section id="welcome">
+        <h1>Report a Lost Item</h1>
+    </section>
+
+    <main class="main-container">
+        <div class="content-container">
+            <h2 class="content-heading">Report a Lost Item</h2>
+            <p class="content-text">Lost something at SQU? Fill in the form below with as much detail as you can.</p>
+            <p class="content-text">Fields marked with <span class="required">*</span> are required.</p>
+
+            <form class="report-form" action="https://httpbin.org/get" method="get">
+                <input type="hidden" name="report_type" value="lost">
+
+                <fieldset>
+                    <legend>Item details</legend>
+
+                    <label for="item_name">Item name <span class="required">*</span></label>
+                    <input type="text" id="item_name" name="item_name" required>
+
+                    <label for="category">Category <span class="required">*</span></label>
+                    <select id="category" name="category" required>
+                        <option value="" disabled selected>Choose a category</option>
+                        <option value="keys">Keys</option>
+                        <option value="bag">Bag or wallet</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="documents">Documents or ID card</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="description">Description <span class="required">*</span></label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+
+                    <label for="location">Where did you last see it? <span class="required">*</span></label>
+                    <input type="text" id="location" name="location" required>
+
+                    <label for="date_lost">Date lost <span class="required">*</span></label>
+                    <input type="date" id="date_lost" name="date_lost" required>
+
+                    <label for="time_lost">Approximate time</label>
+                    <input type="time" id="time_lost" name="time_lost">
+
+                    <label for="photo">Photo (optional)</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your details</legend>
+
+                    <label for="fullname">Full name <span class="required">*</span></label>
+                    <input type="text" id="fullname" name="fullname" required>
+
+                    <label for="email">SQU email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone number (optional)</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{8}">
+
+                    <label>I am a</label>
+                    <label class="choice"><input type="radio" name="reporter_type" value="student" checked> Student</label>
+                    <label class="choice"><input type="radio" name="reporter_type" value="staff"> Staff</label>
+
+                    <label class="choice"><input type="checkbox" name="notify_email" value="yes"> Email me if my item is found</label>
+                    <label class="choice"><input type="checkbox" name="confirm" value="yes" required> I confirm that the information is correct <span class="required">*</span></label>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn">Submit report</button>
+                    <button type="reset" class="btn btn-secondary">Clear form</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 FindIT@SQU. All rights reserved.</p>
+            <p><a href="about.html" class="footer-link">About Us</a> | <a href="contact.html" class="footer-link">Contact Us</a> | <a href="mailto:infofindit@squ.edu.om" class="footer-link">infofindit@squ.edu.om</a></p>
+        </div>
+    </footer>
+</body>
+</html>
