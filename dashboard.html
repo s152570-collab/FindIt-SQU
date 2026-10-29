@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <title>FindIt@SQU</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Internal CSS for the home page -->
+    <style>
+        #welcome {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+                url("Images/welcome.png") center/cover no-repeat;
+            background-size: cover;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--Header -> Logo and Navigation-->
+    <header id="main-header">
+        <div class="header-container">
+            <a class="logo" href="index.html">
+                <img src="Images/logo.png" alt="FindIT@SQU Logo" width="50" height="50">
+            </a>
+            <a href="index.html" class="logo-text">FindIT@SQU</a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="brows.html">Browse and Search Items</a>
+                <a href="lost.html">Lost Items</a>
+                <a href="found.html">Found Items</a>
+                <a href="report-lost.html">Report Lost Items</a>
+                <a href="report-found.html">Report Found Items</a>
+                <a href="item-details.html">Item Details</a>
+                <a href="dashboard.html" class="active">My Dashboard</a>
+                <!-- More -->
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <section id="welcome">
+        <h1>My Dashboard</h1>
+    </section>
+    <main class="main-container">
+        <div class="content-container">
+            <h2 class="content-heading"> Your posts and their status.</h2>
+            <div class="table-wrap">
+                <table>
+                    <caption>
+                        My postes
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Items</th>
+                            <th colspan="2">Details</th>
+                            <th rowspan="2">Status</th>
+                            <th rowspan="2">Action</th>
+                        </tr>
+                        <tr>
+                            <th>Type</th>
+                            <th>Date posted</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Black smartphone</td>
+                            <td>Found</td>
+                            <td>06 Oct 2026</td>
+                            <td>Active</td>
+                            <td><a href="item-details.html">Open</a></td>
+                        </tr>
+                        <tr>
+                            <td>Keys with red Keychain</td>
+                            <td>Found</td>
+                            <td>05 Oct 2026</td>
+                            <td>Active</td>
+                            <td><a href="found.html">Open</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Red bag</td>
+                            <td>Lost</td>
+                            <td>05 Oct 2026</td>
+                            <td>Active</td>
+                            <td><a href="lost.html">Open</a></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Total posts</td>
+                            <td colspan="2">3</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <h2 style="margin-top: 36px; margin-bottom: 15px;">Messages about my items</h2>
+            <ul class="plain">
+                <li>Message about<strong> Black smartphone</strong> received on 07 Oct 2026.</li>
+                <li>Your post <strong>Red bag</strong> was marked as returned.</li>
+            </ul>
+            <p style="width: 150px;"><a class="btn" href="report-found.html" style="margin-top: 15px;">New post</a> <a class="btn btn-outline" href="login.html">Log out</a></p>
+
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 FindIT@SQU. All rights reserved.</p>
+            <p><a href="about.html" class="footer-link">About Us</a> | <a href="contact.html"
+                    class="footer-link">Contact Us</a> | <a href="mailto:infofindit@squ.edu"
+                    class="footer-link">findit@squ.edu.om</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
