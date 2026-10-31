@@ -1,130 +1,733 @@
-<html>
+/* =====================================================
+   FindIT@SQU - external stylesheet (css/style.css)
+   ===================================================== */
 
-<head>
-    <title>FindIt@SQU</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+/* ---------- Colors and fonts ---------- */
+:root {
+    --bg-header: #3a4f59;
+    --bg-header-hover: #2e4049;
+    --bg-button: #556d78;
+    --bg-button-hover: #435862;
+    --text--main: #333333;
+    --text--muted: #555555;
+    --white: #ffffff;
+    --border-active: #ffffff;
+    --font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-serif: 'Merriweather', Georgia, serif;
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Internal CSS for the home page -->
-    <style>
-        #welcome {
-            position: relative;
-            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-                url("images/welcome.png") center/cover no-repeat;
-            background-size: cover;
-            height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 20px;
+    --link-color: #4d636e;
+    --link-visited: #5b6b73;
+    --link-hover-text: #3a4f59;
+    --link-hover-bg: #eef3f5;
+    --link-active-text: #394a52;
+    --link-active-bg: #dbe5e9;
+    --link-focus-outline: #4d636e;
+}
 
-        }
-    </style>
+/* ---------- Universal selector ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-</head>
+/* ---------- Element selectors ---------- */
+body {
+    font-family: var(--font-body);
+    color: var(--text--main);
+    background-color: #f8f7f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.5;
+}
 
-<body>
-    <!--Header -> Logo and Navigation-->
-    <header id="main-header">
-        <div class="header-container">
-            <a class="logo" href="index.html">
-                <img src="images/logo.png" alt="FindIT@SQU Logo" width="50" height="50">
-            </a>
-            <a href="index.html" class="logo-text">FindIT@SQU</a>
-            <nav class="main-nav">
-                <a href="index.html">Home</a>
-               <a href="brows.html">Browse and Search Items</a>
-        <a href="lost.html">Lost Items</a>
-        <a href="found.html">Found Items</a>
-        <a href="Rprt-lost.html">Report Lost Item</a>
-        <a href="Report-found.html">Report Found Item</a>
-                <a href="report-found.html">Report Found Items</a>
-                <a href="item-details.html">Item Details</a>
-                <a href="dashboard.html" class="active">My Dashboard</a>
-                <!-- More -->
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="login.html">Login</a>
-            </nav>
-        </div>
+/* Grouping selector */
+h1,
+h2,
+h3 {
+    font-family: var(--font-serif);
+}
 
-    </header>
+hr {
+    border: none;
+    border-top: 5px solid #e0e0e0;
+    margin-bottom: 18px;
+}
 
-    <section id="welcome">
-        <h1>My Dashboard</h1>
-    </section>
-    <main class="main-container">
-        <div class="content-container">
-            <h2 class="content-heading"> Your posts and their status.</h2>
-            <div class="table-wrap">
-                <table>
-                    <caption>
-                        My postes
-                    </caption>
-                    <thead>
-                        <tr>
-                            <th rowspan="2">Items</th>
-                            <th colspan="2">Details</th>
-                            <th rowspan="2">Status</th>
-                            <th rowspan="2">Action</th>
-                        </tr>
-                        <tr>
-                            <th>Type</th>
-                            <th>Date posted</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Black smartphone</td>
-                            <td>Found</td>
-                            <td>06 Oct 2026</td>
-                            <td>Active</td>
-                            <td><a href="item-details.html">Open</a></td>
-                        </tr>
-                        <tr>
-                            <td>Keys with red Keychain</td>
-                            <td>Found</td>
-                            <td>05 Oct 2026</td>
-                            <td>Active</td>
-                            <td><a href="found.html">Open</a></td>
-                        </tr>
+li {
+    margin-bottom: 10px;
+}
 
-                        <tr>
-                            <td>Red bag</td>
-                            <td>Lost</td>
-                            <td>05 Oct 2026</td>
-                            <td>Active</td>
-                            <td><a href="lost.html">Open</a></td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3">Total posts</td>
-                            <td colspan="2">3</td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-            <h2 style="margin-top: 36px; margin-bottom: 15px;">Messages about my items</h2>
-            <ul class="plain">
-                <li>Message about<strong> Black smartphone</strong> received on 07 Oct 2026.</li>
-                <li>Your post <strong>Red bag</strong> was marked as returned.</li>
-            </ul>
-            <p style="width: 150px;"><a class="btn" href="report-found.html" style="margin-top: 15px;">New post</a> <a class="btn btn-outline" href="login.html">Log out</a></p>
+ul.plain {
+    list-style-type: square;
+    list-style-position: inside;
+    padding-left: 0;
+}
 
-    </main>
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2026 FindIT@SQU. All rights reserved.</p>
-            <p><a href="about.html" class="footer-link">About Us</a> | <a href="contact.html"
-                    class="footer-link">Contact Us</a> | <a href="mailto:infofindit@squ.edu"
-                    class="footer-link">findit@squ.edu.om</a></p>
-        </div>
-    </footer>
-</body>
+dl dt {
+    font-weight: 700;
+    color: #1F4E79;
+    margin-top: 10px;
+}
 
-</html>
+dl dd {
+    margin: 0 0 4px 0;
+}
+
+/* ---------- Link states (order matters: link, visited, hover, active) ---------- */
+a:link {
+    color: var(--link-color);
+}
+
+a:visited {
+    color: var(--link-visited);
+}
+
+a:hover {
+    color: var(--white);
+    background-color: #31424b;
+    border-radius: 2px;
+}
+
+a:active {
+    color: var(--white);
+    background-color: #31424b;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--link-focus-outline);
+    outline-offset: 2px;
+}
+
+/* ---------- Header and navigation ---------- */
+#main-header {
+    background-color: var(--bg-header);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.logo-text:link,
+.logo-text:visited {
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 25px;
+    white-space: nowrap;
+    letter-spacing: -0.2px;
+}
+
+.logo-text:hover {
+    background-color: transparent;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.main-nav a:link,
+.main-nav a:visited {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.83rem;
+    font-weight: 400;
+    padding: 14px 0 12px 0;
+    display: inline-block;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.main-nav a:hover {
+    color: rgb(187, 186, 186);
+    background-color: transparent;
+}
+
+/* Underline that slides in on hover */
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: var(--border-active);
+    transition: width 0.25s ease-in-out, transform 0.1s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+.main-nav a:active::after {
+    transform: translateY(0.5px);
+}
+
+/* The current page keeps its underline */
+.main-nav a.active::after {
+    width: 100%;
+}
+
+.main-nav a.active {
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* ---------- Home banner ---------- */
+#welcome h1 {
+    color: var(--white);
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- Main content ---------- */
+.main-container {
+    background-color: var(--white);
+    flex: 1;
+    padding: 45px 20px 60px 20px;
+}
+
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content-heading {
+    font-family: var(--font-serif);
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 22px;
+    letter-spacing: -0.3px;
+}
+
+.section-heading {
+    margin-top: 2.2rem;
+}
+
+.content-text {
+    font-size: 0.95rem;
+    color: var(--text--main);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.content-text:last-of-type {
+    margin-bottom: 30px;
+}
+
+.content-text a {
+    font-weight: 600;
+}
+
+.note {
+    background-color: #e8f0f8;
+    border-left: 5px solid #1F4E79;
+    padding: 12px 16px;
+    border-radius: 6px;
+}
+
+/* ---------- Buttons (links and form buttons) ---------- */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 280px;
+}
+
+.btn,
+input[type="submit"],
+input[type="reset"] {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 16px;
+    background-color: var(--bg-button);
+    color: var(--white);
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:link,
+.btn:visited {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.btn:hover,
+input[type="submit"]:hover {
+    color: var(--white);
+    background-color: var(--bg-button-hover);
+    text-decoration: none;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+input[type="submit"],
+input[type="reset"],
+.btn-report-lost {
+    width: auto;
+}
+
+input[type="reset"] {
+    background-color: transparent;
+    border: 1px solid var(--bg-button);
+    color: var(--bg-button);
+}
+
+input[type="reset"]:hover {
+    background-color: var(--bg-button);
+    border-color: var(--bg-button);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background-color: #8a9aa2;
+}
+
+.btn-secondary:hover {
+    background-color: #6f7f87;
+}
+
+.btn-outline,
+.btn-outline:link,
+.btn-outline:visited {
+    background-color: transparent;
+    border: 1px solid var(--bg-button);
+    color: var(--bg-button);
+    margin-top: 15px;
+}
+
+.btn-outline:hover {
+    background-color: var(--bg-button);
+    color: var(--white);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: var(--bg-header);
+    color: var(--white);
+    text-align: center;
+    padding: 10px 16px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 2px 0;
+}
+
+.footer-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-link:link,
+.footer-link:visited {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.83rem;
+    font-weight: 400;
+    padding: 2px 0;
+    display: inline-block;
+    transition: color 0.15s ease;
+    position: relative;
+}
+
+/* ---------- Cards ---------- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #DDE3EA;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.card .card-body {
+    padding: 16px;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 999px;
+}
+
+.tag-found {
+    background-color: #DCEBFA;
+    color: #1F4E79;
+}
+
+.tag-lost {
+    background-color: #fff1dd;
+    color: #8a4b00;
+}
+
+/* ---------- Item list and item details pages ---------- */
+.browse-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.item-card {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.item-image {
+    width: 320px;
+    height: 240px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.item-detail {
+    flex: 1;
+}
+
+.item-title {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4a606a;
+    margin-bottom: 12px;
+}
+
+.item-detail p {
+    font-size: 0.92rem;
+    color: var(--text--muted);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.item-detail p strong {
+    color: var(--text--main);
+    font-weight: 600;
+}
+
+.item-photo {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #DDE3EA;
+}
+
+.two-col {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 36px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+/* ---------- Forms (general) ---------- */
+form.form-card {
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border: 1px solid #DDE3EA;
+    border-radius: 12px;
+    padding: 26px;
+}
+
+fieldset {
+    border: 1px solid #C4CFDB;
+    border-radius: 8px;
+    margin: 0 0 20px;
+    padding: 14px 18px;
+}
+
+legend {
+    font-weight: 700;
+    color: #1F4E79;
+    padding: 0 8px;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin: 12px 0 4px;
+}
+
+label.inline {
+    display: inline;
+    margin-right: 14px;
+    font-weight: 400;
+}
+
+/* Attribute selectors */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #8CA0B5;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 12px;
+    max-width: 420px;
+}
+
+.required {
+    color: #d93025;
+}
+
+/* ---------- Contact form ---------- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 500px;
+    margin-top: 25px;
+}
+
+.contact-form label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    border: 1px solid #b8c4ca;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    margin-top: 16px;
+}
+
+/* ---------- Report forms ---------- */
+.report-form {
+    max-width: 600px;
+    margin-top: 25px;
+}
+
+.report-form fieldset {
+    border: 1px solid #b8c4ca;
+    border-radius: 3px;
+    padding: 8px 18px 18px;
+    margin-bottom: 22px;
+}
+
+.report-form legend {
+    font-weight: 600;
+    padding: 0 6px;
+}
+
+.report-form label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+
+.report-form input[type="text"],
+.report-form input[type="email"],
+.report-form input[type="tel"],
+.report-form input[type="date"],
+.report-form input[type="time"],
+.report-form select,
+.report-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    border: 1px solid #b8c4ca;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.report-form textarea {
+    resize: vertical;
+}
+
+.report-form .choice {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+/* ---------- Tables ---------- */
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+caption {
+    caption-side: top;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 8px;
+    text-align: left;
+    color: var(--bg-header);
+}
+
+th,
+td {
+    border: 1px solid #C4CFDB;
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background-color: var(--bg-header);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+tr:nth-child(even) td {
+    background-color: #F0F4F8;
+}
+
+td.group {
+    background-color: var(--link-active-bg);
+    font-weight: 700;
+    text-align: center;
+}
+
+tfoot td {
+    background-color: #d2e4ea;
+    font-weight: 700;
+}
+
+td img {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 760px) {
+    .header-container {
+        flex-wrap: wrap;
+    }
+
+    .main-nav {
+        gap: 4px 14px;
+    }
+
+    #welcome h1 {
+        font-size: 2.2rem;
+    }
+
+    .item-card {
+        flex-direction: column;
+    }
+
+    .item-image {
+        width: 100%;
+    }
+
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+
+    th,
+    td {
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+}
