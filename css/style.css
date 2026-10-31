@@ -211,7 +211,7 @@ a:focus-visible {
     max-width: 280px;
 }
 
-.btn ,input[type="submit"],
+.btn, input[type="submit"],
 input[type="reset"] {
     display: inline-block;
     width: 100%;
