@@ -42,72 +42,81 @@
         </div>
     </nav>
 
-    <section id="welcome">
-        <h1>Lost Items</h1>
-    </section>
-    <main class="main-container">
-        <div class="content-container">
-            <h2 class="content-heading">Lost Items</h2>
-            <p class="content-text">Have you lost something at SQU?</p>
-            <p class="content-text">This page shows items that students and staff have reported missing around campus.
-                Y0u can chack the
+    <header class="position-relative text-center text-white">
+        <img src="images/welcome.png" alt="Welcome" class="w-100 object-fit-cover" height="280">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
+        <div class="position-absolute top-50 start-50 translate-middle w-100 px-3">
+            <h1 class="display-4 fw-bold mb-0">FindIt@SQU</h1>
+        </div>
+    </header>
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+            <h2 class="mb-3">Lost Items</h2>
+            <p class="mb-3">Have you lost something at SQU?</p>
+            <p class="mb-3">This page shows items that students and staff have reported missing around campus.
+                You can check the
+
                 listed items to see it you have found something that belongs to someone else.
             </p>
-            <p class="content-text">Each report includes the items's description, the location where it was lost, and
+            <p class="mb-3">Each report includes the items's description, the location where it was lost, and
                 the date it went
                 missing.
             </p>
-            <div class="card-grid">
-                <article class="card">
-                    <img src="images/redHandBag.png" alt="red handbag">
-                    <div class="card-body"><span class="tag tag-lost">Lost</span>
-                        <h3>Keys with red keychain</h3>
-                        <dl>
-                            <dt>Last seen</dt>
-                            <dd>Library entrance</dd>
-                            <dt>Date</dt>
-                            <dd>05 Oct 2026</dd>
-                        </dl>
-                        <a href="item-details.html">View details</a>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="images/keys.png" alt="Keys with a red keychain">
-                    <div class="card-body"><span class="tag tag-lost">Lost</span>
-                        <h3>Keys with red keychain</h3>
-                        <dl>
-                            <dt>Last seen</dt>
-                            <dd>Library entrance</dd>
-                            <dt>Date</dt>
-                            <dd>05 Oct 2026</dd>
-                        </dl>
-                        <a href="item-details.html">View details</a>
-                    </div>
-                </article>
+            <div class="row g-4 mb-5">
+                <div class="col-sm-6 col-lg-4">
+                    <article class="card h-100 shadow-sm">
+                        <div class="ratio ratio-4x3">
+                            <img src="images/redHandBag.png" alt="red handbag" class="card-img-top object-fit-cover">
+                        </div>
+                        <div class="card-body"><span class="badge text-bg-warning">Lost</span>
+                            <h3 class="h5 mt-2">Keys with red keychain</h3>
+                            <dl class="row small mb-0">
+                                <dt class="col-5">Last seen</dt>
+                                <dd class="col-7 mb-1">Library entrance</dd>
+                                <dt class="col-5">Date</dt>
+                                <dd class="col-7 mb-1">05 Oct 2026</dd>
+                            </dl><a href="item-details.html" class="btn btn-sm btn-primary mt-2">View details</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <article class="card h-100 shadow-sm">
+                        <img src="images/keys.png" alt="Keys with a red keychain" class="card-img-top">
+                        <div class="card-body"><span class="badge text-bg-warning">Lost</span>
+                            <h3 class="h5 mt-2">Keys with red keychain</h3>
+                            <dl class="row small mb-0">
+                                <dt class="col-5">Last seen</dt>
+                                <dd class="col-7 mb-1">Library entrance</dd>
+                                <dt class="col-5">Date</dt>
+                                <dd class="col-7 mb-1">05 Oct 2026</dd>
+                            </dl><a href="item-details.html" class="btn btn-sm btn-primary mt-2">View details</a>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <h2 style="margin-top: 36px; margin-bottom: 16;">Tips for owners</h2>
-            <ul class="plain">
-                <li>Post as soon as you notice the item is missing.</li>
-                <li>Add a clear description and the place you last saw it.</li>
-                <li>Check the <a href="found.html">Found Items</a> page every day.</li>
-            </ul>
-            <p><a class="btn btn-report-lost" href="report-lost.html">Report a lost item</a></p>
-
-
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="h4">Tips for owners</h2>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item">Post as soon as you notice the item is missing.</li>
+                        <li class="list-group-item">Add a clear description and the place you last saw it.</li>
+                        <li class="list-group-item">Check the <a href="found.html">Found Items</a> page every day.</li>
+                    </ul>
+                    <a class="btn btn-primary" href="report-lost.html">Report a lost item</a>
+                </div>
+            </div>
         </div>
-
-
     </main>
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2026 FindIT@SQU. All rights reserved.</p>
-            <p><a href="about.html" class="footer-link">About Us</a> | <a href="contact.html"
-                    class="footer-link">Contact Us</a> | <a href="mailto:infofindit@squ.edu"
-                    class="footer-link">findit@squ.edu.om</a></p>
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 FindIT@SQU. All rights reserved.</p>
+            <p class="mb-0 small"><a href="about.html" class="link-light">About Us</a> |
+                <a href="contact.html" class="link-light">Contact Us</a> |
+                <a href="mailto:infofindit@squ.edu" class="link-light">findit@squ.edu.om</a>
+            </p>
         </div>
     </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-</body>
 
 </html>
