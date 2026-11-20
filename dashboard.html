@@ -42,23 +42,27 @@
         </div>
     </nav>
 
-    <section id="welcome">
-        <h1>My Dashboard</h1>
-    </section>
-    <main class="main-container">
-        <div class="content-container">
-            <h2 class="content-heading"> Your posts and their status.</h2>
-            <div class="table-wrap">
-                <table>
-                    <caption>
-                        My postes
+     <header class="position-relative text-center text-white">
+        <img src="images/welcome.png" alt="Welcome" class="w-100 object-fit-cover" height="280">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
+        <div class="position-absolute top-50 start-50 translate-middle w-100 px-3">
+            <h1 class="display-4 fw-bold mb-0">My Dashboard</h1>
+        </div>
+    </header>
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+            <h2 class="mb-3">Your posts and their status.</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped align-middle text-center bg-white">
+                    <caption class="caption-top fw-bold fs-5 text-start">
+                        My posts
                     </caption>
-                    <thead>
+                    <thead class="table-dark">
                         <tr>
-                            <th rowspan="2">Items</th>
+                            <th rowspan="2" class="align-middle">Items</th>
                             <th colspan="2">Details</th>
-                            <th rowspan="2">Status</th>
-                            <th rowspan="2">Action</th>
+                            <th rowspan="2" class="align-middle">Status</th>
+                            <th rowspan="2" class="align-middle">Action</th>
                         </tr>
                         <tr>
                             <th>Type</th>
@@ -70,14 +74,14 @@
                             <td>Black smartphone</td>
                             <td>Found</td>
                             <td>06 Oct 2026</td>
-                            <td>Active</td>
+                            <td><span class="badge text-bg-success">Active</span></td>
                             <td><a href="item-details.html">Open</a></td>
                         </tr>
                         <tr>
                             <td>Keys with red Keychain</td>
                             <td>Found</td>
                             <td>05 Oct 2026</td>
-                            <td>Active</td>
+                            <td><span class="badge text-bg-success">Active</span></td>
                             <td><a href="found.html">Open</a></td>
                         </tr>
 
@@ -85,36 +89,37 @@
                             <td>Red bag</td>
                             <td>Lost</td>
                             <td>05 Oct 2026</td>
-                            <td>Active</td>
+                            <td><span class="badge text-bg-success">Active</span></td>
                             <td><a href="lost.html">Open</a></td>
                         </tr>
                     </tbody>
-                    <tfoot>
-                        <tr>
+                    <tfoot class="table-group-divider">
+                        <tr class="table-light fw-bold">
                             <td colspan="3">Total posts</td>
                             <td colspan="2">3</td>
                         </tr>
                     </tfoot>
                 </table>
             </div>
-            <h2 style="margin-top: 36px; margin-bottom: 15px;">Messages about my items</h2>
-            <ul class="plain">
-                <li>Message about<strong> Black smartphone</strong> received on 07 Oct 2026.</li>
-                <li>Your post <strong>Red bag</strong> was marked as returned.</li>
+            <h2 class="mb-3 mt-5 h4">Messages about my items</h2>
+            <ul class="list-group mb-4">
+                <li class="list-group-item">Message about<strong> Black smartphone</strong> received on 07 Oct 2026.</li>
+                <li class="list-group-item">Your post <strong>Red bag</strong> was marked as returned.</li>
             </ul>
-            <p style="width: 150px;"><a class="btn" href="report-found.html" style="margin-top: 15px;">New post</a> <a class="btn btn-outline" href="login.html">Log out</a></p>
+            <a class="btn btn-primary me-2" href="report-found.html" >New post</a> <a class="btn btn-outline-secondary" href="login.html">Log out</a></p>
 
     </main>
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2026 FindIT@SQU. All rights reserved.</p>
-            <p><a href="about.html" class="footer-link">About Us</a> | <a href="contact.html"
-                    class="footer-link">Contact Us</a> | <a href="mailto:infofindit@squ.edu"
-                    class="footer-link">findit@squ.edu.om</a></p>
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 FindIT@SQU. All rights reserved.</p>
+            <p class="mb-0 small"><a href="about.html" class="link-light">About Us</a> |
+                <a href="contact.html" class="link-light">Contact Us</a> |
+                <a href="mailto:infofindit@squ.edu" class="link-light">findit@squ.edu.om</a>
+            </p>
         </div>
     </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 
 </html>
