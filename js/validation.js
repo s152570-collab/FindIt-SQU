@@ -1,4 +1,10 @@
 /*
+HOW IT WORKS
+    1. Every form with the class "needs-validation" gets checked.
+    2. When someone hits Submit, the browsers rules (required, type="email", pattern, minlength...) are tested using form.checkValidity().
+    3. If a field is not valid, the submit stops and the form receives the Bootstrap class "was-validated".
+        Bootstrap then shows red borders and the text inside each ".invalid-feedback".
+    4. If all fields pass, the form goes through as usual.
 */
 
 window.addEventListener("load",function(){
