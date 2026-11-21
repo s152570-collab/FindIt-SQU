@@ -119,7 +119,7 @@ function searchItems(event) {
     var keyword = document.getElementById("q").value.trim().toLowerCase();
     var category = document.getElementById("cat").value;
     var type = document.querySelector('input[name="item_type"]:checked').value;
-    var since = document.getElementById("since").value;
+    var since = document.getElementById("from").value;
 
     var results = []; // items that match all the chosen filters
 
