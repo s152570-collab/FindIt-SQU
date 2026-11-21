@@ -1,4 +1,15 @@
-/**/
+/*
+WHAT IT DOES
+It checks the answers of the questionnaire before the form is sent.
+Four fields have their rule, written as a "regular expression" (a pattern that describes what correct text looks like):
+    1. Full name – at two words, letters only
+    2. SQU email – a student or a staff address of the university
+    3. Phone – a number (optional, but checked if typed)
+    4. Comments – at 15 characters and at least 3 real words
+    The star rating (radio buttons) must also be chosen.
+HOW THE FEEDBACK IS SHOWN
+Bootstrap draws a border when we add the class "is-valid" and a red border plus the error text when we add "is-invalid".
+*/
 
 window.addEventListener("load",function(){
     var form= document.getElementById("feedbackForm");
